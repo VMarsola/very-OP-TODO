@@ -1,0 +1,31 @@
+:root {
+  --canvas: #f9f5f4;
+  --surface: #f3efee;
+  --surface-hover: #eee8e7;
+  --ink: #121212;
+  --button: #393433;
+  --accent: #b56f50;
+  --focus: #9d6b52;
+  --control-border: #9f9f9f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-inter), "Inter", Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
