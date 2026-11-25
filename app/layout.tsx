@@ -1,0 +1,22 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+});
+
+export const metadata: Metadata = {
+  title: "Very OP TODO",
+  description: "An overpowered TODO app",
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html lang="pt-br" className={`${inter.variable}`}>
+      <body>{children}</body>
+    </html>
+  );
+}
