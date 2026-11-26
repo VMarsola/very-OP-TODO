@@ -1,5 +1,5 @@
 <!-- Sync Impact Report
-Version change: 1.1.0 -> 1.2.0
+Version change: 1.2.0 -> 1.2.1
 Modified principles: IV. Component Folder Structure
 Added sections: none
 Removed sections: none
@@ -44,24 +44,26 @@ empty placeholders. The standard structure is:
 |-- hooks/use{hookName}.ts
 |-- utils.ts
 |-- constants.ts
-|-- subcomponents/{subcomponentName}/
+|-- {subcomponentName}/
 	|-- container/
 	|-- presentation/
 ```
 
 Containers MUST be composition-only and SHOULD receive no props unless necessary; any container props
-interface MUST be defined in the container entry file. Presentations MUST be pure UI, with a TypeScript
-interface for their props and styles in their presentation module. Stateful components MUST keep Redux
-Toolkit state, reducers, and actions in `slice/index.ts`; selectors MUST read specific portions of state.
-Hooks MUST use the `use` prefix and orchestrate logic, utilities MUST be pure and independently testable,
-and constants MUST hold shared component information such as error details, analytics structures, and
-shared text. Subcomponents used exclusively by a component MUST live in its `subcomponents/` directory
-and follow the same responsibility boundaries where applicable.
+interface MUST be defined in the container entry file. Components that do not require a container MUST
+omit the container folder and MUST NOT use a `Presentation` suffix in their component name.
+Presentations MUST be pure UI, with a TypeScript interface for their props and styles in their
+presentation module. Stateful components MUST keep Redux Toolkit state, reducers, and actions in
+`slice/index.ts`; selectors MUST read specific portions of state. Hooks MUST use the `use` prefix and
+orchestrate logic, utilities MUST be pure and independently testable, and constants MUST hold shared
+component information such as error details, analytics structures, and shared text. Subcomponents used
+exclusively by a component MUST live in a path created inside the component path and follow the same responsibility
+boundaries where applicable.
 
 Components shared across multiple feature or component structures MUST live under
 `/components/commons`, following the same responsibility-based organization where applicable. For
 example, a reusable input control used by multiple components MUST be placed in
-`/components/commons` rather than duplicated inside each component's `subcomponents/` directory.
+`/components/commons` rather than duplicated inside each component's subcomponents path.
 
 ## Static Web Constraints
 
@@ -88,4 +90,4 @@ version update, and review of affected specifications and implementation work.
 Compliance MUST be checked during specification, implementation, review, and release. Runtime and build
 configuration MUST remain consistent with the static-first architecture.
 
-**Version**: 1.2.0 | **Ratified**: 2026-11-19 | **Last Amended**: 2026-11-24
+**Version**: 1.2.1 | **Ratified**: 2026-11-19 | **Last Amended**: 2026-11-26

@@ -1,0 +1,26 @@
+.row {
+  min-height: var(--control-size-large);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-medium);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.row:hover {
+  background: var(--surface-hover);
+}
+
+.title {
+  min-width: var(--space-0);
+  color: var(--ink);
+  font: var(--font-body);
+  overflow-wrap: anywhere;
+}
+
+.completed .title {
+  color: var(--muted);
+  text-decoration: line-through;
+}

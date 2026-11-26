@@ -1,0 +1,18 @@
+.button {
+  min-height: var(--control-size-large);
+  border: var(--border-width) solid var(--transparent);
+  border-radius: var(--radius-medium);
+  background: var(--button);
+  color: var(--white);
+  font: var(--font-button);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--button-hover);
+}
+
+.button:focus-visible {
+  outline: var(--focus-width) solid var(--focus);
+  outline-offset: var(--focus-offset);
+}

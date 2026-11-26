@@ -1,0 +1,16 @@
+.composer {
+  width: var(--full-width);
+  display: grid;
+  grid-template-columns: minmax(var(--space-0), 1fr) var(
+      --composer-button-width
+    );
+  gap: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .composer {
+    grid-template-columns: minmax(var(--space-0), 1fr) var(
+        --composer-button-width-mobile
+      );
+  }
+}

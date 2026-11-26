@@ -1,0 +1,18 @@
+.input {
+  width: var(--full-width);
+  min-height: var(--control-size-large);
+  border: var(--border-width) solid var(--transparent);
+  border-radius: var(--radius-medium);
+  background: var(--surface);
+  color: var(--ink);
+  padding: var(--space-0) var(--space-4);
+}
+
+.input::placeholder {
+  color: var(--muted);
+}
+
+.input:focus-visible {
+  border-color: var(--focus);
+  outline: var(--focus-width) solid var(--focus-ring);
+}

@@ -4,10 +4,69 @@
   --surface-hover: #eee8e7;
   --ink: #121212;
   --button: #393433;
+  --button-hover: #2f2a29;
   --accent: #b56f50;
   --focus: #9d6b52;
+  --focus-ring: rgba(157, 107, 82, 0.18);
   --control-border: #9f9f9f;
-}
+  --muted: #77706e;
+  --white: #ffffff;
+  --transparent: transparent;
+
+  --breakpoint-mobile: 767px;
+  --breakpoint-tablet-min: 768px;
+  --breakpoint-tablet-max: 1100px;
+
+  --control-size: 24px;
+  --control-size-small: 20px;
+  --control-size-large: 56px;
+  --heading-height: 44px;
+  --category-label-height: 15px;
+
+  --space-0: 0;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 48px;
+  --space-9: 72px;
+  --space-10: 120px;
+
+  --radius-small: 6px;
+  --radius-medium: 8px;
+  --border-width: 1px;
+  --focus-width: 3px;
+  --focus-offset: 3px;
+
+  --font-family: var(--font-inter), "Inter", Arial, sans-serif;
+  --font-body: 400 16px / 21px var(--font-family);
+  --font-button: 600 16px / 21px var(--font-family);
+  --font-label: 400 12px / 15px var(--font-family);
+  --font-heading: 600 34px / 44px var(--font-family);
+  --letter-spacing-heading: -0.02em;
+  --letter-spacing-label: 0.04em;
+
+  --opacity-hidden: 0;
+  --control-inset: 6px;
+  --check-width: 9px;
+  --check-height: 5px;
+  --check-margin-top: 7px;
+  --check-margin-inline: 6px;
+  --check-border-width: 2px;
+  --check-transform: rotate(-45deg);
+
+  --composer-button-width: 96px;
+  --composer-button-width-mobile: 88px;
+  --page-min-height: 100vh;
+  --page-min-category-height: 360px;
+  --category-gap: 24px;
+  --category-mobile-gap: 32px;
+  --category-columns-desktop: repeat(3, minmax(var(--space-0), 1fr));
+  --category-columns-single: 1fr;
+  --full-width: 100%;
 
 * {
   box-sizing: border-box;
@@ -19,10 +78,10 @@ body {
 }
 
 body {
-  margin: 0;
+  margin: var(--space-0);
   background: var(--canvas);
   color: var(--ink);
-  font-family: var(--font-inter), "Inter", Arial, sans-serif;
+  font: var(--font-body);
 }
 
 button,

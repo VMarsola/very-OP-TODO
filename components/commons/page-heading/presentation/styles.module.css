@@ -1,0 +1,6 @@
+.heading {
+  min-height: var(--heading-height);
+  margin: var(--space-0);
+  font: var(--font-heading);
+  letter-spacing: var(--letter-spacing-heading);
+}

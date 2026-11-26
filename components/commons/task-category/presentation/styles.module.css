@@ -1,0 +1,19 @@
+.category {
+  min-width: var(--space-0);
+}
+
+.label {
+  height: var(--category-label-height);
+  margin: var(--space-0);
+  padding: var(--space-0) var(--space-3);
+  color: var(--accent);
+  font: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-label);
+}
+
+.tasks {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
